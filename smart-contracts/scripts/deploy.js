@@ -1,21 +1,22 @@
 const { ethers } = require("hardhat");
 
 async function main() {
-  //STKN
-  console.log("Deploying STKN Contract...");
-  const STKNFactory = await ethers.getContractFactory("CarlosAlvarado");
-  const stkn = await STKNFactory.deploy();
+  //CMA
+  console.log("Deploying CMA Contract...");
+  const CMAFactory = await ethers.getContractFactory("CMA");
+  const cma = await CMAFactory.deploy();
 
-  console.log("Deployed STKN:", stkn.address);
+  console.log("Deployed CMA:", cma.address);
 
-  //STKNICO
-  console.log("Deploying stknICO Contract...");
-  const StknICOFactory = await ethers.getContractFactory("CmaICO");
-  const stknICO = await StknICOFactory.deploy(
-    stkn.address
+  //CMAICO
+  console.log("Deploying cmaICO Contract...");
+  const CmaICOFactory = await ethers.getContractFactory("CmaICO");
+  const cmaICO = await CmaICOFactory.deploy(
+    "0xAA0965Ea7CC830C0fBb1a5458f9C4bBC79BC1a57",
+    cma.address
   );
 
-  console.log("Deployed stknICO:", stknICO.address);
+  console.log("Deployed cmaICO:", cmaICO.address);
 }
 
 main()

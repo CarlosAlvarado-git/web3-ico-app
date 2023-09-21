@@ -11,7 +11,7 @@ const TokenDetails = ({ title, value }) => {
           <div className="m-2">
             <a
               className="btn text-sm mt-2 "
-              href="https://sepolia.etherscan.io/token/0x5FbDB2315678afecb367f032d93F642f64180aa3"
+              href="https://sepolia.etherscan.io/token/0x3B7977f03Be8eD6717266B61610d0dB6851b98c1"
               target="_blank"
               rel="noreferrer noopener"
             >

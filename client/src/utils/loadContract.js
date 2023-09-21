@@ -16,7 +16,7 @@ async function loadContract(signer, chainId, setContract, address) {
   );
 
   setContract({
-    stknICO: _cmaICOContract,
+    cmaICO: _cmaICOContract,
   });
 
   //Read From Contract

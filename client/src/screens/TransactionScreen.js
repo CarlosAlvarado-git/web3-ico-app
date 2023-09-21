@@ -4,6 +4,8 @@ import Transaction from "../components/Transaction";
 import GlobalContext from "../context/GlobalContext";
 import userTransactions from "../utils/userTransactions";
 
+const REACT_APP_ETHERSCAN_API = "PS5JHMNMZZHUS8IHV1DGV874JXAXX9NBD1"
+
 const TransactionScreen = () => {
   const [allTransaction, setAllTransaction] = useState([]);
   const [yourTransaction, setYourTransaction] = useState([]);
@@ -16,7 +18,7 @@ const TransactionScreen = () => {
 
   const handleUserTransaction = async () => {
     const data = await userTransactions(
-      `https://api-sepolia.etherscan.io/api?module=logs&action=getLogs&fromBlock=0&toBlock=latest&address=0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512&topic0=0x2e206bbdd5787cd6d3e97144dec044f9f15dd77a257afd27fa70cad6f03feae3&apikey=${process.env.REACT_APP_ETHERSCAN_API}`
+      `https://api-sepolia.etherscan.io/api?module=logs&action=getLogs&fromBlock=0&toBlock=latest&address=0xa6A80F95e5304DaEC4AF758F475981F67c2E2756&topic0=0x2e206bbdd5787cd6d3e97144dec044f9f15dd77a257afd27fa70cad6f03feae3&apikey=${REACT_APP_ETHERSCAN_API}`
     );
     setAllTransaction(data);
 
@@ -25,10 +27,10 @@ const TransactionScreen = () => {
     }
 
     const yourTx = await userTransactions(
-      `https://api-sepolia.etherscan.io/api?module=logs&action=getLogs&fromBlock=0&toBlock=latest&address=0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512&topic0=0x2e206bbdd5787cd6d3e97144dec044f9f15dd77a257afd27fa70cad6f03feae3&topic2=0x000000000000000000000000${account.address.substring(
+      `https://api-sepolia.etherscan.io/api?module=logs&action=getLogs&fromBlock=0&toBlock=latest&address=0xa6A80F95e5304DaEC4AF758F475981F67c2E2756&topic0=0x2e206bbdd5787cd6d3e97144dec044f9f15dd77a257afd27fa70cad6f03feae3&topic2=0x000000000000000000000000${account.address.substring(
         2,
         42
-      )}&apikey=${process.env.REACT_APP_ETHERSCAN_API}`
+      )}&apikey=${REACT_APP_ETHERSCAN_API}`
     );
 
     setYourTransaction(yourTx);

@@ -45,7 +45,7 @@ const TokenScreen = () => {
       );
       handleConnectWallet();
     } catch (error) {
-      handleError(error, "STKN");
+      handleError(error, "CMA");
     }
   };
   return (
@@ -65,7 +65,7 @@ const TokenScreen = () => {
           <TokenDetails title="Maximum Supply" value={millify(10000000)} />
           <TokenDetails
             title="Token Address"
-            value="0x5FbDB2315678afecb367f032d93F642f64180aa3"
+            value="0x3B7977f03Be8eD6717266B61610d0dB6851b98c1"
           />
         </div>
       </div>
@@ -103,7 +103,7 @@ const TokenScreen = () => {
               type="number"
               min={10}
               max={30000}
-              placeholder="No. of STKN Tokens..."
+              placeholder="No. of CMA Tokens..."
               value={userAmount}
               onChange={(e) => {
                 setUserAmount(e.target.value);
