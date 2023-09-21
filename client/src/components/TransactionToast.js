@@ -7,7 +7,7 @@ const TransactionToast = ({ userAmount, hash, text, text2 }) => {
         Successfully {text} {userAmount} STKN Tokens {text2}
       </div>
       <a
-        href={`https://goerli.etherscan.io/tx/${hash}`}
+        href={`https://sepolia.etherscan.io/tx/${hash}`}
         target="_blank"
         rel="noreferrer noopener"
         className="text-blue-300 mt-2 underline"

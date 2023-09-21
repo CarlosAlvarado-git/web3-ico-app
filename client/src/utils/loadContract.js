@@ -1,32 +1,32 @@
 import { ethers } from "ethers";
-import { stakingICOAddress, stakingICOAbi } from "./constants";
+import { cmaICOAddress, cmaICOAbi } from "./constants";
 import { toast } from "react-toastify";
 
 async function loadContract(signer, chainId, setContract, address) {
-  if (chainId !== 5) {
+  if (chainId !== 11155111) {
     toast.error(
-      "Please Change your network to Goerli Network for Buying Tokens"
+      "Please Change your network to Sepolia Network for Buying Tokens"
     );
     return;
   }
-  const _stknICOContract = new ethers.Contract(
-    stakingICOAddress,
-    stakingICOAbi,
+  const _cmaICOContract = new ethers.Contract(
+    cmaICOAddress,
+    cmaICOAbi,
     signer
   );
 
   setContract({
-    stknICO: _stknICOContract,
+    stknICO: _cmaICOContract,
   });
 
   //Read From Contract
 
   const tokensAvailable = ethers.utils.formatEther(
-    await _stknICOContract.getICOTokenBalance()
+    await _cmaICOContract.getICOTokenBalance()
   );
 
   const investorBalance = ethers.utils.formatEther(
-    await _stknICOContract.investorBalanceOf(address)
+    await _cmaICOContract.investorBalanceOf(address)
   );
 
   return {
