@@ -10,7 +10,7 @@ const SaleEnds = () => {
   // const tokensAvailableInPerc = (icoState.tokensAvailable / 5000000) * 100;
 
   const [timer, setTimer] = useState({
-    icoEndDate: "Tuesday, 26 September 2023",
+    icoEndDate: "Tuesday, 15 August 2023 18:19:48 GMT+00:00",
     days: "0",
     hours: "0",
     minutes: "0",

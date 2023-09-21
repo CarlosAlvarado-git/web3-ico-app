@@ -10,7 +10,7 @@ const TransactionItem = ({ txHash, timestamp, tokens, investor, text }) => {
       <tr>
         <td className="grid justify-center items-center h-[5rem] w-[7rem] md:w-[9.5rem]">
           <a
-            href={`https://sepolia.etherscan.io/tx/${txHash}`}
+            href={`https://goerli.etherscan.io/tx/${txHash}`}
             target="_blank"
             rel="noreferrer noopener"
             title="View on Block Explorer"
@@ -35,7 +35,7 @@ const TransactionItem = ({ txHash, timestamp, tokens, investor, text }) => {
           >
             <div className="transaction-item">
               <a
-                href={`https://sepolia.etherscan.io/address/${investor}`}
+                href={`https://goerli.etherscan.io/address/${investor}`}
                 target="_blank"
                 rel="noreferrer noopener"
                 title={investor}

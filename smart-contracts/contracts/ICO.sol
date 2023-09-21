@@ -3,7 +3,7 @@ pragma solidity 0.8.16;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-contract CmaICO {
+contract StknICO {
     //Administration Details
     address public admin;
     address payable public ICOWallet;
@@ -12,11 +12,11 @@ contract CmaICO {
     IERC20 public token;
 
     //ICO Details
-    uint public tokenPrice = 0.01111111 ether;
-    uint public hardCap = 100 ether;
+    uint public tokenPrice = 0.0001 ether;
+    uint public hardCap = 500 ether;
     uint public raisedAmount;
     uint public minInvestment = 0.001 ether;
-    uint public maxInvestment = 10 ether;
+    uint public maxInvestment = 3 ether;
     uint public icoStartTime;
     uint public icoEndTime;
 
@@ -85,7 +85,7 @@ contract CmaICO {
         require(ICOState == State.BEFORE, "ICO isn't in before state");
 
         icoStartTime = block.timestamp;
-        icoEndTime = icoStartTime + (86400 * 7);
+        icoEndTime = icoStartTime + (86400 * 365);
         ICOState = State.RUNNING;
     }
 

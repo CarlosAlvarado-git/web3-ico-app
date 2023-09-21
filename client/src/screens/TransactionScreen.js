@@ -16,7 +16,7 @@ const TransactionScreen = () => {
 
   const handleUserTransaction = async () => {
     const data = await userTransactions(
-      `https://api-sepolia.etherscan.io/api?module=logs&action=getLogs&fromBlock=0&toBlock=latest&address=0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512&topic0=0x2e206bbdd5787cd6d3e97144dec044f9f15dd77a257afd27fa70cad6f03feae3&apikey=${process.env.REACT_APP_ETHERSCAN_API}`
+      `https://api-goerli.etherscan.io/api?module=logs&action=getLogs&fromBlock=0&toBlock=latest&address=0x8f0680d7aa5a919eefcae59f79956495427217cc&topic0=0x2e206bbdd5787cd6d3e97144dec044f9f15dd77a257afd27fa70cad6f03feae3&apikey=${process.env.REACT_APP_ETHERSCAN_API}`
     );
     setAllTransaction(data);
 
@@ -25,7 +25,7 @@ const TransactionScreen = () => {
     }
 
     const yourTx = await userTransactions(
-      `https://api-sepolia.etherscan.io/api?module=logs&action=getLogs&fromBlock=0&toBlock=latest&address=0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512&topic0=0x2e206bbdd5787cd6d3e97144dec044f9f15dd77a257afd27fa70cad6f03feae3&topic2=0x000000000000000000000000${account.address.substring(
+      `https://api-goerli.etherscan.io/api?module=logs&action=getLogs&fromBlock=0&toBlock=latest&address=0x8f0680d7aa5a919eefcae59f79956495427217cc&topic0=0x2e206bbdd5787cd6d3e97144dec044f9f15dd77a257afd27fa70cad6f03feae3&topic2=0x000000000000000000000000${account.address.substring(
         2,
         42
       )}&apikey=${process.env.REACT_APP_ETHERSCAN_API}`

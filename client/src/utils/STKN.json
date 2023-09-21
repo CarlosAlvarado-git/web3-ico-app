@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-artifact-1",
-  "contractName": "CMA",
-  "sourceName": "contracts/CMA.sol",
+  "contractName": "STKN",
+  "sourceName": "contracts/STKN.sol",
   "abi": [
     {
       "inputs": [],
