@@ -1,6 +1,6 @@
 {
   "_format": "hh-sol-artifact-1",
-  "contractName": "StknICO",
+  "contractName": "CmaICO",
   "sourceName": "contracts/ICO.sol",
   "abi": [
     {
@@ -84,7 +84,7 @@
       "name": "ICOState",
       "outputs": [
         {
-          "internalType": "enum StknICO.State",
+          "internalType": "enum CmaICO.State",
           "name": "",
           "type": "uint8"
         }
