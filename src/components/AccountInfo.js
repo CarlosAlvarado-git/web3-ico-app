@@ -16,10 +16,10 @@ const AccountInfo = ({ web3, contract }) => {
         const ethBalanceEth = web3.utils.fromWei(ethBalanceWei, "ether");
         setEthBalance(ethBalanceEth);
 
-        // Obtener el saldo de tokens Beharcoin del usuario
+        // Obtener el saldo de tokens Carloscoin del usuario
         console.log("esta es la cuenta", userAddress)
         const tokenBalanceWei = await contract.methods.balanceOf(userAddress).call();
-        console.log("su valor de tokens DBA", tokenBalanceWei)
+        console.log("su valor de tokens CAA", tokenBalanceWei)
         const decimals = 10; // Decimales del token (ajusta según tu contrato)
         const tokenBalanceTokens = web3.utils.fromWei(tokenBalanceWei, "ether") / 18**decimals;
         setTokenBalance(tokenBalanceTokens);
@@ -38,7 +38,7 @@ const AccountInfo = ({ web3, contract }) => {
       <h2>Información de la cuenta</h2>
       <p>Dirección de la cuenta: {web3 && web3.currentProvider.selectedAddress}</p>
       <p>Saldo de Sepolia-ETH: {ethBalance} ETH</p>
-      <p>Saldo de tokens BeharCoin: {parseFloat(tokenBalance).toLocaleString()} TKC</p>
+      <p>Saldo de tokens CarlosCoin: {parseFloat(tokenBalance).toLocaleString()} CAA</p>
     </div>
   );
 };

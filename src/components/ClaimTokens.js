@@ -46,7 +46,7 @@ function ClaimTokens({ contract, userAddress }) {
   return (
     <div className="rounded p-4 shadow mt-4">
       <h2>Reclamar Tokens</h2>
-      <p>Saldo de tokens Tukicoin en el contrato: {tokenBalance} DBA</p>
+      <p>Saldo de tokens Tukicoin en el contrato: {tokenBalance} CAA</p>
       <button className="btn btn-success" onClick={handleClaimTokens}>
         Reclamar Tokens
       </button>

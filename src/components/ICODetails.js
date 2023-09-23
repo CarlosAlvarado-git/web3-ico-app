@@ -48,7 +48,7 @@ const ICODetails = ({ contract }) => {
     <div className="rounded p-4 shadow mt-4">
       <h2>Detalles de la ICO</h2>
       <p>Tiempo restante en la ICO: {icoData.timeRemaining} segundos</p>
-      <p>Cantidad de tokens vendidos: {icoData.tokensSold} DBA</p>
+      <p>Cantidad de tokens vendidos: {icoData.tokensSold} CAA</p>
       <p>Cantidad de Sepolia-ETH recibidos: {icoData.ethReceived} ETH</p>
     </div>
   );

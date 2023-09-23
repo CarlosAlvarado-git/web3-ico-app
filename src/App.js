@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Web3 from "web3";
-import BeharCoin from "./BeharCoin.json";
+import CarlosCoin from "./CarlosCoin.json";
 import AccountInfo from "./components/AccountInfo";
 import ClaimTokens from "./components/ClaimTokens";
 import ICODetails from "./components/ICODetails";
@@ -23,12 +23,12 @@ function App() {
           await window.ethereum.enable();
           setWeb3(web3Instance);
 
-          const contractAddress = "0x3928694a680C4cD6b9D41eF2fA8F19b3EBa9A30A";
-          const beharcoinContract = new web3Instance.eth.Contract(
-            BeharCoin.abi,
+          const contractAddress = "0xDa3B3fCc3DDFd4bef9C25A78fC649468d939e668";
+          const carloscoinContract = new web3Instance.eth.Contract(
+            CarlosCoin.abi,
             contractAddress
           );
-          setContract(beharcoinContract);
+          setContract(carloscoinContract);
 
           // Obtener la dirección de la cuenta del usuario
           const accounts = await web3Instance.eth.getAccounts();
